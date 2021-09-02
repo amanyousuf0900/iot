@@ -1,0 +1,21 @@
+#include <Servo.h>
+Servo servomotor;
+int pos;
+void setup() {
+ 
+servomotor.attach(6);
+}
+
+void loop() {
+for (pos =0; pos<=180; pos++){
+  servomotor.write(pos);
+  delay(10);
+}
+delay(1000);
+
+for(pos =180; pos<=0; pos--){
+  servomotor.write(pos);
+  delay(10);
+}
+delay(1000);
+}
